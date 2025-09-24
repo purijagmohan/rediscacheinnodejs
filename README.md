@@ -2,8 +2,10 @@
 Create a mini redis cache using nodejs(typescript)
 
 1: Implement a RESP server that can be used to store key value pairs where value is of string format. Other format can be added later as extension.
-2: Should be developed as a single threaded model with concurrent requests queued to mimic the REDIS server.Nodejs therefore makes perfect sense as gives 
+2: Should be developed as a single threaded model with concurrent requests processed serially to mimic the REDIS server. Nodejs therefore makes perfect sense as gives 
 similar capabilities off the shelf.
+3: Should store data all in memory with ability to recover stored data in case of a system crash.
+3: Should evict stale data to handle size issue since it's all inmemory.
 
 # How to access
 1: Start the server : 
