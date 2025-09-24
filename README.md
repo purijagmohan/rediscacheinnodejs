@@ -12,11 +12,17 @@ Create a mini redis cache using nodejs(typescript)
   > ts-node mini-redis-server.ts
 
 2: Install redis-cli to serve as Client to the RESP server
-  > redis-cli -p 6379 PING
-  # -> "PONG"
+  > redis-cli -p 6379
+      > SET user1 "{\"name\":\"Alice\",\"age\":30}"  // Add Item to cache
+      > GET user1  // Fetch Item from Cache
+      > DEL user1  // Remove Item from Cache
 
-  > redis-cli -p 6379 SET mykey hello
-  > redis-cli -p 6379 GET mykey
-  # -> "hello"
+      // Stats
+      > INFO memory
+      > INFO
 
+      // TTL
+      > EXPIRE user1 5  // Sets TTL to 5 seconds
+      > TTL user1  // returns remaining time to live. Should get purged after TTL = 0
+      
 
