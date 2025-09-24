@@ -13,6 +13,8 @@ Create a mini redis cache using nodejs(typescript)
 
 2: Install redis-cli to serve as Client to the RESP server
   > redis-cli -p 6379
+
+      // Add, Fetch, Remove tasks
       > SET user1 "{\"name\":\"Alice\",\"age\":30}"  // Add Item to cache
       > GET user1  // Fetch Item from Cache
       > DEL user1  // Remove Item from Cache
