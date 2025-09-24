@@ -5,7 +5,7 @@ Create a mini redis cache using nodejs(typescript)
 2: Should be developed as a single threaded model with concurrent requests queued to mimic the REDIS server.Nodejs therefore makes perfect sense as gives 
 similar capabilities off the shelf.
 
-#How to access
+# How to access
 1: Start the server : 
   > ts-node mini-redis-server.ts
 
